@@ -6,7 +6,7 @@ from google import genai
 import json
 
 # Get key from environmental GEMINI_API_KEY
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY", "temp"))
 
 # Optional Databricks
 USE_DATABRICKS = os.getenv("USE_DATABRICKS", "false").lower() == "true"
